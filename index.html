@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deodar Homestay | Stay among the pines near Solan</title>
+<meta name="description" content="Family-run homestay near Solan, Himachal Pradesh. Check rates and send your booking enquiry on WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--dusk:#27344d;--apple:#b8432f;--wood:#7a5236;--mist:#f1f4f7;--ink:#1c2230;--muted:#5a6475;--line:#d6dce4;--white:#fff}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito Sans',sans-serif;font-size:17px;line-height:1.6;color:var(--ink);background:var(--mist)}
+h1,h2,h3,.logo{font-family:'Young Serif',serif;font-weight:400;line-height:1.15}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--apple);outline-offset:3px}
+
+.top{display:flex;justify-content:space-between;align-items:center;padding:1rem 5vw;background:var(--dusk);color:var(--mist)}
+.logo{font-size:1.4rem;text-decoration:none}
+.top nav a{margin-left:1.4rem;text-decoration:none;font-weight:600}
+.top nav a:hover{text-decoration:underline}
+
+.hero{position:relative;background:var(--dusk);color:var(--mist);padding:4rem 5vw 7rem;overflow:hidden}
+.hero svg{position:absolute;left:0;right:0;bottom:0;width:100%;height:150px}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.2fr 1fr;gap:3rem;align-items:start;max-width:72rem;margin:0 auto}
+.hero h1{font-size:clamp(2.3rem,5.5vw,4.2rem);margin-bottom:1.2rem}
+.hero p.lead{max-width:30rem;color:#c9d2e0}
+
+.book{background:var(--white);color:var(--ink);padding:1.6rem;border-radius:10px;border-top:6px solid var(--apple)}
+.book h2{font-size:1.4rem;margin-bottom:1rem}
+.book label{display:block;font-weight:600;font-size:.9rem;margin:.7rem 0 .25rem}
+.book input,.book select{width:100%;font:inherit;padding:.6rem .7rem;border:1.5px solid var(--line);border-radius:6px;background:var(--white)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
+.est{margin:1rem 0 .4rem;padding:.8rem;background:var(--mist);border-radius:6px;min-height:3.4rem}
+.est strong{font-size:1.2rem;color:var(--apple)}
+.err{color:var(--apple);font-weight:600;font-size:.95rem;min-height:1.3rem}
+.btn{display:block;width:100%;text-align:center;background:var(--apple);color:var(--white);font:inherit;font-weight:700;padding:.85rem;border:0;border-radius:6px;text-decoration:none;cursor:pointer}
+.btn:hover{background:#9c3624}
+
+section.block{max-width:72rem;margin:0 auto;padding:4rem 5vw}
+section.block h2{font-size:2.1rem;color:var(--dusk);margin-bottom:1.4rem}
+.room{display:grid;grid-template-columns:7rem 1fr auto;gap:1.4rem;align-items:center;padding:1.3rem 0;border-bottom:1px solid var(--line)}
+.swatch{height:5rem;border-radius:8px;background:linear-gradient(135deg,var(--dusk),var(--wood))}
+.room h3{font-size:1.3rem;margin-bottom:.2rem}
+.room p{color:var(--muted);font-size:.95rem}
+.rate{text-align:right;font-weight:700;color:var(--wood)}
+.rate small{display:block;font-weight:400;color:var(--muted)}
+.list{columns:2;column-gap:3rem;list-style:none}
+.list li{padding:.45rem 0;border-bottom:1px solid var(--line);break-inside:avoid}
+.visit{display:grid;grid-template-columns:1fr 1.2fr;gap:2.5rem;align-items:start}
+.visit p{margin-bottom:.5rem}
+.visit a.l{font-weight:700;color:var(--apple)}
+.map iframe{width:100%;height:280px;border:0;border-radius:10px}
+footer{padding:1.5rem 5vw;background:var(--dusk);color:#aab6ca;text-align:center;font-size:.9rem}
+
+@media(max-width:800px){
+  .hero-grid,.visit{grid-template-columns:1fr}
+  .room{grid-template-columns:5rem 1fr}
+  .rate{grid-column:2;text-align:left}
+  .list{columns:1}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <a class="logo" href="#">Deodar Homestay</a>
+  <nav><a href="#rooms">Rooms</a><a href="#visit">Find us</a></nav>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero-grid">
+      <div>
+        <h1>Wake up to pine trees and fresh mountain air.</h1>
+        <p class="lead">Three clean, warm rooms in a family home near Solan. Homemade Himachali breakfast, a quiet garden and hosts who know every trail nearby.</p>
+      </div>
+      <form class="book" id="form" novalidate>
+        <h2>Check your stay</h2>
+        <label for="room">Room</label>
+        <select id="room"></select>
+        <div class="row2">
+          <div><label for="in">Check-in</label><input type="date" id="in"></div>
+          <div><label for="out">Check-out</label><input type="date" id="out"></div>
+        </div>
+        <div class="row2">
+          <div><label for="guests">Guests</label><input type="number" id="guests" min="1" value="2"></div>
+          <div><label for="name">Your name</label><input type="text" id="name" autocomplete="name"></div>
+        </div>
+        <div class="est" id="est" aria-live="polite">Pick your dates to see the price.</div>
+        <p class="err" id="err" aria-live="polite"></p>
+        <a class="btn" id="send" href="#">Send enquiry on WhatsApp</a>
+      </form>
+    </div>
+    <svg viewBox="0 0 1200 150" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 150V95l120-60 110 55 150-80 170 95 150-70 140 70 160-85 200 90v90z" fill="#f1f4f7"/>
+    </svg>
+  </section>
+
+  <section id="rooms" class="block">
+    <h2>Rooms and rates</h2>
+    <div id="rooms-list"></div>
+    <p style="margin-top:1rem;color:#5a6475;font-size:.95rem">Rates are per room per night and include breakfast. Final price is confirmed on WhatsApp.</p>
+  </section>
+
+  <section class="block">
+    <h2>What is included</h2>
+    <ul class="list">
+      <li>Homemade breakfast</li><li>Hot water all day</li>
+      <li>Free parking</li><li>Wi-Fi</li>
+      <li>Garden seating</li><li>Local trek guidance</li>
+      <li>Bonfire evenings (winter)</li><li>Pickup from Solan bus stand</li>
+    </ul>
+  </section>
+
+  <section id="visit" class="block visit">
+    <div>
+      <h2>Find us</h2>
+      <p>Near Solan, Himachal Pradesh</p>
+      <p>Check-in from 12:00 PM, check-out by 11:00 AM</p>
+      <p><a class="l" href="tel:+919999999999">Call +91 99999 99999</a></p>
+    </div>
+    <div class="map">
+      <!-- Replace the src with the Google Maps embed link of the real homestay -->
+      <iframe title="Homestay location" loading="lazy" src="https://www.google.com/maps?q=Solan,Himachal+Pradesh&output=embed"></iframe>
+    </div>
+  </section>
+</main>
+
+<footer><p>© 2026 Deodar Homestay. This is a demo website.</p></footer>
+
+<script>
+// ====== Edit these for each client ======
+const WHATSAPP_NUMBER = "919999999999"; // country code + number, no + or spaces
+const HOMESTAY_NAME = "Deodar Homestay";
+const ROOMS = [
+  { name: "Garden room", desc: "Ground floor, double bed, attached bathroom, garden view", rate: 1800, max: 3 },
+  { name: "Valley room", desc: "First floor balcony, double bed, attached bathroom, valley view", rate: 2400, max: 3 },
+  { name: "Family suite", desc: "Two beds and a sofa, big balcony, attached bathroom", rate: 3600, max: 5 }
+];
+
+const $ = id => document.getElementById(id);
+const roomSel = $("room"), inEl = $("in"), outEl = $("out"), guestsEl = $("guests"), nameEl = $("name");
+const est = $("est"), err = $("err"), send = $("send");
+
+ROOMS.forEach((r, i) => {
+  roomSel.add(new Option(`${r.name} (₹${r.rate}/night)`, i));
+  $("rooms-list").insertAdjacentHTML("beforeend",
+    `<div class="room"><div class="swatch" aria-hidden="true"></div>
+     <div><h3>${r.name}</h3><p>${r.desc}</p><p>Up to ${r.max} guests</p></div>
+     <div class="rate">₹${r.rate}<small>per night</small></div></div>`);
+});
+
+const today = new Date().toISOString().split("T")[0];
+inEl.min = today; outEl.min = today;
+
+function nights() {
+  if (!inEl.value || !outEl.value) return 0;
+  return Math.round((new Date(outEl.value) - new Date(inEl.value)) / 86400000);
+}
+
+function update() {
+  const room = ROOMS[roomSel.value], n = nights(), g = parseInt(guestsEl.value) || 0;
+  err.textContent = "";
+  if (inEl.value) outEl.min = inEl.value;
+  if (inEl.value && outEl.value && n <= 0) {
+    err.textContent = "Check-out must be after check-in.";
+    est.textContent = "Pick your dates to see the price.";
+  } else if (n > 0) {
+    est.innerHTML = `${n} night${n > 1 ? "s" : ""} × ₹${room.rate} = <strong>₹${n * room.rate}</strong>`;
+  } else {
+    est.textContent = "Pick your dates to see the price.";
+  }
+  if (g > room.max) err.textContent = `${room.name} fits up to ${room.max} guests. Choose a bigger room.`;
+  const msg = `Hello ${HOMESTAY_NAME}, I want to book.\nName: ${nameEl.value || "-"}\nRoom: ${room.name}\nCheck-in: ${inEl.value || "-"}\nCheck-out: ${outEl.value || "-"}\nGuests: ${g}` + (n > 0 ? `\nEstimate: ₹${n * room.rate} for ${n} night(s)` : "");
+  send.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
+  send.target = "_blank"; send.rel = "noopener";
+}
+
+send.addEventListener("click", e => {
+  update();
+  if (nights() <= 0 || !nameEl.value.trim() || err.textContent) {
+    e.preventDefault();
+    if (!err.textContent) err.textContent = "Add your name and both dates first.";
+  }
+});
+[roomSel, inEl, outEl, guestsEl, nameEl].forEach(el => el.addEventListener("input", update));
+$("form").addEventListener("submit", e => e.preventDefault());
+update();
+</script>
+</body>
+</html>
